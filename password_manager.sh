@@ -19,7 +19,7 @@ do
                read -s -p "パスワードを入力してください:" password
                echo " "
                echo "service:${service},user:${user},password:${password}" >> password_manager.txt
-       
+               echo "パスワードの追加に成功しました"
 	#Get Passwordが入力された場合
                elif [ "${select}" = "Get Password" ]; then
                read -p "サービスを入力してください:" service
