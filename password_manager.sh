@@ -18,12 +18,13 @@ do
                read -p "ユーザー名を入力してください:" user
                read -s -p "パスワードを入力してください:" password
                echo " "
-               echo "service:${service},user:${user},password:${password}" >> password_manager.txt
+               echo "service:${service},user:${user},password:${password}" >> password_manager.txt.pgp --batch --passphrase "password" --symmeric password_manager.txt
+	       rm password_manager.txt
                echo "パスワードの追加に成功しました"
 	#Get Passwordが入力された場合
-               elif [ "${select}" = "Get Password" ]; then
+         elif [ "${select}" = "Get Password" ]; then
                read -p "サービスを入力してください:" service
-               result=$(grep "service:${service}" password_manager.txt)
+               result=$(gpg --batch --passphrase "password" --decrypt password_manager.txt.pgp 2>/dev/null | grep "service:${service}")
 	       if [ -z "${result}" ]; then
 		       echo "そのサービスは登録されていません。"
 	       else
