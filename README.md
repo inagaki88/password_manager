@@ -12,9 +12,9 @@
 - Exit: 終了
 
 ## 実行環境
-- Git Bash:WindowsでGit・Linuxコマンドを使う
-- GCP(Google Cloud Platform):クラウド上でのLinux環境
-- Ubuntu 22.04:GCP上でのOS
+- Git Bash: WindowsでGit・Linuxコマンドを使う
+- GCP(Google Cloud Platform): クラウド上でのLinux環境
+- Ubuntu 22.04: GCP上でのOS
 
 ## 暗号化
-- GPG(GnuPG):ファイルの暗号化・複合化
+- GPG(GnuPG): ファイルの暗号化・複合化
